@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<p>Please add ur advertise details here: </p>
+
+<form action="" method="post" novalidate>
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Submit">
+</form>

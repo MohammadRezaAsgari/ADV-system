@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% for adser in Advertisers %}
+    <table style="border-collapse: collapse; width: 100%; height: 165px;" border="1">
+    <tbody>
+    <tr style="height: 165px;">
+    <td style="width: 100%; height: 165px;">
+
+        <p> {{ adser.name }}</p>
+        {% for ads in Ads %}
+            {% if ads.advertiser.name == adser.name %}
+                <p><a href={{ ads.link }}> {{ ads.title }} </a>
+                <img src={{ ads.img }} alt="" width="158" height="100" /></p>
+            {% endif %}
+        {% endfor %}
+    </td>
+    </tr>
+    </tbody>
+    </table>
+{% endfor %}
